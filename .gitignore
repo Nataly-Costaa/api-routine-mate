@@ -1,0 +1,17 @@
+# Ignorar node_modules (dependências do projeto)
+node_modules/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de cache
+*.cache
+
+# Ignorar arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de configuração específicos do editor
+.idea/
+.vscode/
+*.swp
