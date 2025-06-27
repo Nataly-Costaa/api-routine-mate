@@ -1,15 +1,15 @@
-import express from "express";
-import habits from "./routes/habit.routes.js"
+import express from 'express';
+import habitRoutes from './routes/habit.routes.js';
+import { corsMiddleware } from './middleware/cors.js';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
+app.use(corsMiddleware);
 
-// Define o prefixo "/habits" para todas as rotas do habits
-app.use("/habits", habits);
+app.use('/habits', habitRoutes);
 
-// Inicia o servidor e escuta na porta definida
 app.listen(PORT, () => {
-    console.log(`Rodando o servidor na porta ${PORT}`);
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
 });
