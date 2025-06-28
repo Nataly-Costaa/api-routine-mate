@@ -83,9 +83,7 @@ npm run dev
 
 A aplicação está hospedada no Render e pode ser acessada em:
 
-```
-[http://localhost:3001/habits](https://api-routine-mate.onrender.com/habits)
-```
+[https://api-routine-mate.onrender.com/habits](https://api-routine-mate.onrender.com/habits)
 
 ---
 
