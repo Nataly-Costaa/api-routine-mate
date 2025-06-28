@@ -81,10 +81,10 @@ npm run prisma:migrate
 npm run dev
 ```
 
-A aplicação estará disponível em:
+A aplicação está hospedada no Render e pode ser acessada em:
 
 ```
-http://localhost:3001/habits
+[http://localhost:3001/habits](https://api-routine-mate.onrender.com/habits)
 ```
 
 ---
@@ -136,17 +136,17 @@ Retorna:
 ## 🧩 Estrutura do projeto
 
 ```
+prisma/
+├── schema.prisma
 src/
 ├── controller/
 │   └── habit.controller.js
-├── service/
-│   └── habit.service.js
-├── routes/
-│   └── habit.routes.js
 ├── middleware/
 │   └── cors.js
-├── prisma/
-│   └── schema.prisma
+├── routes/
+│   └── habit.routes.js
+├── service/
+│   └── habit.service.js
 ├── server.js
 ```
 
