@@ -8,9 +8,8 @@ A API permite que você:
 - Cadastre novos hábitos;
 - Marque hábitos como concluídos;
 - Gere relatórios de progresso;
+- Pegue um hábito por ID;
 - Exclua hábitos indesejados.
-
-O armazenamento é feito de forma local, utilizando um arquivo JSON (`db.json`), dispensando bancos de dados externos, ideal para fins didáticos e pequenos projetos.
 
 ---
 
@@ -43,7 +42,7 @@ npm run dev
 O servidor estará disponível por padrão em:
 
 ```http
-http://localhost:3000/habits
+http://localhost:3001/habits
 ```
 ---
 
@@ -55,9 +54,7 @@ http://localhost:3000/habits
 | `POST` | `/habits/register`| 	Cadastra um novo hábito |
 | `PATCH` | `/habits/:id/complete`| 	Marca um hábito como concluído |
 | `GET` | `/habits/report`| 	Gera um relatório de progresso |
+| `GET` | `/habits/:id`| 	Pega um hábito por ID |
 | `DELETE` | `/habits/:id`| 	Remove um hábito pelo ID |
 
----
 
-## ⚙️ Observações importantes
-- O projeto **não utiliza banco de dados externo**. Os hábitos são armazenados localmente no arquivo **src/data/db.json**.
