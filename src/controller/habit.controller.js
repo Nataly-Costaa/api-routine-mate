@@ -6,6 +6,18 @@ export const HabitController = {
     res.json({ habits });
   },
 
+  async getHabitById(req, res) {
+    const { id } = req.params;
+
+    const habit = await HabitService.getById(id);
+
+    if (!habit) {
+        return res.status(404).json({ message: 'Hábito não encontrado' });
+    }
+
+    res.json({ habit });
+  },
+
   async createHabit(req, res) {
     const { title, description, goal } = req.body;
 

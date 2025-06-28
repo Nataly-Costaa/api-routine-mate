@@ -27,6 +27,12 @@ export const HabitService = {
     });
   },
 
+  async getById(id) {
+    return prisma.habit.findUnique({
+        where: { id }
+    });
+  },
+
   async delete(id) {
     return prisma.habit.delete({
       where: { id },
