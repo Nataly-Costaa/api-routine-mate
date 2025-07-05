@@ -45,11 +45,13 @@ export const HabitService = {
     const completed = all.filter(h => h.completed).length;
     const pending = total - completed;
 
+    const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
+
     return {
       total,
       completed,
       pending,
-      progress: `${completed}/${total} hábitos concluídos`,
+      progress: `${percent}%`,
     };
   }
 };
