@@ -18,11 +18,15 @@ export const HabitService = {
   },
 
   async complete(id) {
+    const habit = await prisma.habit.findUnique({ where: {id} });
+
+    const isNowCompleted = !habit.completed;
+
     return prisma.habit.update({
       where: { id },
       data: {
-        completed: true,
-        completedAt: new Date(),
+        completed: isNowCompleted,
+        completedAt: isNowCompleted ? new Date() : null,
       },
     });
   },
